@@ -9,11 +9,11 @@ import {
   animate 
 } from "framer-motion";
 import { 
-  TrendingUp, Users, Star, Play, Wallet,
-  Zap, Monitor, MessageSquare, Target,
-  ShieldCheck, ArrowRight, Lock, History,
-  FileText, Activity, Crosshair, Globe,
-  Award, Instagram, Twitter, Youtube, Mail
+  TrendingUp, Users, Star, Play, 
+  Zap, Monitor,
+  ShieldCheck, ArrowRight, Lock, 
+   Activity, Crosshair, Globe,
+   Instagram, Twitter, Youtube, Mail
 } from "lucide-react";
 
 // --- Utility Function ---
