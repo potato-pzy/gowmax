@@ -9,11 +9,11 @@ import {
   animate 
 } from "framer-motion";
 import { 
-  TrendingUp, Users, Star, Play,
-  Zap, Monitor,
-  ShieldCheck, ArrowRight, Lock,
-  Activity, Crosshair, Globe,
-  Instagram, Twitter, Youtube, Mail
+  TrendingUp, Users, Star, Play, Wallet,
+  Zap, Monitor, MessageSquare, Target,
+  ShieldCheck, ArrowRight, Lock, History,
+  FileText, Activity, Crosshair, Globe,
+  Award, Instagram, Twitter, Youtube, Mail
 } from "lucide-react";
 
 // --- Utility Function ---
@@ -349,14 +349,19 @@ const ScrollRevealFeatures = () => {
       title: "Mental Edge",
       icon: TrendingUp,
       content: (
-        <div className="flex flex-col gap-3">
-          <p>Mirroring is as much about mindset as it is execution.</p>
-          <div className="space-y-2">
-            {["Daily Debriefs", "Workshops"].map((item, i) => (
-                <div key={i} className="flex items-center gap-3 p-2 bg-slate-800/40 rounded-xl border border-slate-700">
-                    <ArrowRight className="w-3 h-3 text-[#c9a227]" />
-                    <span className="font-bold text-slate-200 text-[9px] uppercase tracking-wider">{item}</span>
-                </div>
+        <div className="flex flex-col gap-4">
+          <p>Winning traders think differently. We train both your strategy <em>and</em> your psychology.</p>
+          <div className="grid grid-cols-2 gap-3">
+            {[
+              { label: "Daily Debriefs", sub: "Post-market reviews", dark: true },
+              { label: "Live Workshops", sub: "Interactive sessions", dark: false },
+              { label: "Bias Breakers", sub: "Overcome FOMO & fear", dark: true },
+              { label: "Mindset Drills", sub: "Daily habit system", dark: false },
+            ].map((item, i) => (
+              <div key={i} className={`p-3 rounded-xl border flex flex-col gap-1 shadow-sm ${item.dark ? "bg-gradient-to-br from-slate-900 to-slate-800 border-slate-700" : "bg-gradient-to-br from-[#c9a227]/15 to-[#c9a227]/5 border-[#c9a227]/30"}`}>
+                <span className="font-black text-white text-[10px] uppercase tracking-wider leading-tight">{item.label}</span>
+                <span className="text-[9px] text-slate-400 font-medium leading-tight">{item.sub}</span>
+              </div>
             ))}
           </div>
         </div>
@@ -592,10 +597,10 @@ export default function App() {
                 <span>1,000+ traders already in</span>
               </div>
             </motion.div>
-            <motion.h1 initial={{ opacity: 0, y: 24 }} animate={{ opacity: 1, y: 0 }} transition={{ duration: 0.8, delay: 0.1 }} className="mt-8 text-4xl sm:text-6xl lg:text-[4.5rem] font-extrabold tracking-tight text-slate-900 leading-[1.1]">
+            <motion.h1 initial={{ opacity: 0, y: 24 }} animate={{ opacity: 1, y: 0 }} transition={{ duration: 0.8, delay: 0.1 }} className="mt-8 text-[4rem] sm:text-6xl lg:text-[4.5rem] font-extrabold tracking-tight text-slate-900 leading-[1.1]">
               Let's trade <br />
               <span className="relative inline-block mt-2 h-[1.5em] min-w-[240px] sm:min-w-[320px]">
-                <FlipWords words={flipWordsArray} className="text-transparent bg-clip-text bg-gradient-to-r from-[#EAD196] via-[#C49535] to-[#7A550F] -ml-2 pb-2" />
+                <FlipWords words={flipWordsArray} className="text-[#C49535] drop-shadow-md -ml-2 pb-2" />
               </span>
             </motion.h1>
             <motion.p initial={{ opacity: 0, y: 24 }} animate={{ opacity: 1, y: 0 }} transition={{ duration: 0.8, delay: 0.2 }} className="mt-6 text-base sm:text-lg leading-relaxed text-slate-600 font-medium max-w-lg">
